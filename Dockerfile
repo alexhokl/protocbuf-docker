@@ -21,6 +21,8 @@ RUN ./autogen.sh && \
 
 WORKDIR /home/app
 
+USER app
+
 RUN go get -u github.com/golang/protobuf/protoc-gen-go
 
 ENTRYPOINT ["protoc"]
